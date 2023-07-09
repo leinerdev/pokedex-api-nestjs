@@ -2,6 +2,10 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
+# Stack usado
+* MondoDB
+* NestJS
+
 # Ejecutar en desarrollo
 
 1. Clonar el repositorio
@@ -33,6 +37,12 @@ http://localhost:3000/api/v2/seed
 ```
 
 
-# Stack usado
-* MondoDB
-* NestJS
+
+# Production Build
+1. Crear el archivo ```.env.prod```
+2. Llenar las variables de entorno de prod
+3. Crear la nueva la imágen:
+
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
